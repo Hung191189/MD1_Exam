@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let arr = [1, 2, 3, 4, 5];
+
+    function insertNumberToArray(array, x, index) {
+        let arrayResult = [];
+        if (index >= 0 && index < array.length) {
+            for (let i = 0; i < array.length; i++) {
+                if (i !== index) {
+                    arrayResult.push(array[i]);
+                } else {
+                    arrayResult.push(x);
+                    arrayResult.push(array[i]);
+                }
+            }
+        } else {
+            return array;
+        }
+        return arrayResult;
+    }
+    let x =+ prompt("Input x: ")
+    let index =+ prompt("Input index: ")
+    num = insertNumberToArray(arr, x, index)
+
+    document.write('New array is: ' + num)
+</script>

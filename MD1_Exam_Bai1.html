@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Find Avg</h1>
+<button onclick="result()">Avg</button>
+</body>
+</html>
+<script>
+    function result(){
+        let arr = [];
+        let sum = 0;
+        let avg = 0
+        for(let i = 0; i < 3; i++){
+            arr[i] =+ prompt("Nhập điểm 3 môn Toán, Lý, Hóa: ")
+            sum += arr[i]
+        }
+        avg = sum/arr.length
+        document.write("Điểm trung bình là: " + avg)
+    }
+</script>
